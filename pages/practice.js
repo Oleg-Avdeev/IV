@@ -6,7 +6,7 @@ exports.getPage = function (user, word) {
 
     return `<html>
 <head>
-    <title>Learn new verbs</title>
+    <title>Practice verbs</title>
     <style>${style}</style>
 </head>
 <body>

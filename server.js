@@ -37,9 +37,8 @@ app.post('/:user/learn', (req, res) => {
 
 app.get('/:user/practice', (req, res) => {
     var user = users.getUser(req.params.user);
+    var line = getWord(user, 20);
     
-    var index = getRandomInt(user.learn_id + 1);
-    var line = words.getVerb(index)
     var response = practice_page.getPage(user, line);
     res.send(response);
 });
@@ -51,8 +50,7 @@ app.post('/:user/practice', (req, res) => {
         user.words_rating[req.body.word] = (user.words_rating[req.body.word] || 0) + 1;;
     users.setUser(user);
 
-    var index = getRandomInt(user.learn_id + 1);
-    var line = words.getVerb(index)
+    var line = getWord(user, 20);
     var response = practice_page.getPage(user, line);
     res.send(response);
 });
@@ -61,4 +59,19 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
+}
+
+function getWord(user, maxRating) {
+    var r = 0;
+    var length = user.learn_id + 1;
+    var index = getRandomInt(length);
+    while (r < length) {
+        var line = words.getVerb(index)
+        var rating = user.words_rating[line[0]]
+        if (!rating || rating < maxRating) {
+            return line;
+        }
+        index = (index + 1) % length
+        r++;
+    }
 }
