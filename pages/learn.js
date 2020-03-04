@@ -2,7 +2,7 @@ const fs = require('fs')
 
 exports.getPage = function (user, word) {
     
-    var style = fs.readFileSync("./pages/style.css")
+    var style = fs.readFileSync(__dirname+"/style.css")
 
     return `<html>
 <head>
