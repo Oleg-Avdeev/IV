@@ -10,7 +10,7 @@ const profile_page = require('./pages/profile')
 const app = express()
 const port = 4444
 
-app.use(__dirname + express.static('public'))
+app.use(express.static(__dirname + '/public'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
