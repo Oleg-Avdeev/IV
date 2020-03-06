@@ -15,7 +15,7 @@ exports.getPage = function (user, word) {
 <body>
     <div class="card">
         <h1><p class="word">${word[3]}</p></h1>
-        <h2><p>${word[0]} | ${word[1]} | ${word[2]}</p></h2>
+        <h2><p>${word[0]} <span>|</span> ${word[1]} <span>|</span> ${word[2]}</p></h2>
         <form action="/${user.name}/learn" method="POST">
           <input type="submit" class="button" value="${text}">
         </form>

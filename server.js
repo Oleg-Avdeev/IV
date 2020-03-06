@@ -72,7 +72,7 @@ function getRandomInt(max) {
 
 function getWord(user, maxRating) {
     var r = 0;
-    var length = user.learn_id + 1;
+    var length = user.learn_id;
     var index = getRandomInt(length);
     while (r < length) {
         var line = words.getVerb(index)

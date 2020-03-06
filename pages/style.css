@@ -66,6 +66,7 @@ body {
     /* margin-top: 50%; */
     position: absolute;
     bottom: 0px;
+    left: 0px;
   }
 
 .button:hover {
@@ -105,4 +106,21 @@ body {
 
 .word {
   padding-top: 22%;
+}
+
+#v1, #v2, #v3 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 32px;
+  text-align: center;
+  height: 46px;
+  width: 20%;
+  margin-top: 35%;
+}
+
+#v1 {
+  margin-left: 18%;
+}
+
+span {
+  color: rgba(0, 0, 0, 0.1);
 }

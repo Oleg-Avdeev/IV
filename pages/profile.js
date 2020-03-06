@@ -16,7 +16,7 @@ exports.getPage = function (user) {
         <h2><p>Что хочешь делать?</p></h2>
         
         <form action="/${user.name}/practice" method="GET">
-          <input style="padding: 5px; width: 50%; right: 0px;" type="submit" class="button" value="Повторять">
+          <input style="padding: 5px; width: 50%; right: 0px; left: 50%;" type="submit" class="button" value="Повторять">
         </form>
 
         <form action="/${user.name}/learn" method="GET">
