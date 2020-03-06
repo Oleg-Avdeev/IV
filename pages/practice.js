@@ -77,7 +77,7 @@ exports.getPage = function (user, word) {
 <body>
     ${rating}
     ${q}
-</div>
+    <div id="preload"> <img src="../2.jpg" width="1" height="1" alt="Image 01" /> </div>
 </body>
 
 <script>

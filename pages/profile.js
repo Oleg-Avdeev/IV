@@ -22,8 +22,8 @@ exports.getPage = function (user) {
         <form action="/${user.name}/learn" method="GET">
           <input style="padding: 5px; width: 50%;" type="submit" class="button" value="Учить">
         </form>
-
     </div>
+    <div id="preload"> <img src="../2.jpg" width="1" height="1" alt="Image 01" /> </div>
 </body>
 </html>`;
 }

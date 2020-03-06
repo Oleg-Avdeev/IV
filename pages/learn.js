@@ -23,6 +23,7 @@ exports.getPage = function (user, word) {
         <a href="/${user.name}/" class="previous">&#8249;</a>
         <div class="counter">${learned}/5</div>
     </div>
+    <div id="preload"> <img src="../2.jpg" width="1" height="1" alt="Image 01" /> </div>
 </body>
 </html>`;
 }

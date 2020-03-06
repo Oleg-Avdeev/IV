@@ -124,3 +124,5 @@ body {
 span {
   color: rgba(0, 0, 0, 0.1);
 }
+
+div#preload { display: none; }
