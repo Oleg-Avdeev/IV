@@ -46,7 +46,7 @@ app.post('/:user/learn', (req, res) => {
 
 app.get('/:user/practice', (req, res) => {
     var user = users.getUser(req.params.user);
-    var line = getWord(user, 20);
+    var line = getWord(user, 10);
     
     var response = practice_page.getPage(user, line);
     res.send(response);
@@ -59,7 +59,7 @@ app.post('/:user/practice', (req, res) => {
         user.words_rating[req.body.word] = (user.words_rating[req.body.word] || 0) + 1;;
     users.setUser(user);
 
-    var line = getWord(user, 20);
+    var line = getWord(user, 10);
     var response = practice_page.getPage(user, line);
     res.send(response);
 });

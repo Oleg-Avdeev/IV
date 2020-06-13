@@ -118,6 +118,7 @@ exports.getPage = function (user, word) {
       if (none) return true;
       if (u === v) return true;
       
+      v = v.replace("\\", "/")
       split = v.split("/");
       if (split[0] && split[0] === u) return true;
       if (split[1] && split[1] === u) return true;
