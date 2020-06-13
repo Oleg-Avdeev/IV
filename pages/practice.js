@@ -112,13 +112,13 @@ exports.getPage = function (user, word) {
 
     function compareWords(u, v) {
       u = u.toLowerCase();
+      u = u.replace("\\\\", "/");
       v = v.toLowerCase();
       
       var none = isNone(u) && isNone(v);
       if (none) return true;
       if (u === v) return true;
       
-      v = v.replace("\\", "/");
       split = v.split("/");
       if (split[0] && split[0] === u) return true;
       if (split[1] && split[1] === u) return true;
